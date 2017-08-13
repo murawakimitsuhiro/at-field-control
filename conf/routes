@@ -9,6 +9,11 @@ module:testrunner
 
 GET     /                                       App.Index
 
+GET     /api/users                        Users.Index
+GET     /api/users/:id                    Users.Show
+POST    /api/users                        Users.Create
+DELETE  /api/users/:id                    Users.Delete
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

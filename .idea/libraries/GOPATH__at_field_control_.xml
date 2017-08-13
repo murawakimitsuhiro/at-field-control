@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;at-field-control&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../sfc-sfs" />
+      <root url="file://$PROJECT_DIR$/../freezetag" />
+      <root url="file://$PROJECT_DIR$/../upload" />
+      <root url="file://$PROJECT_DIR$/../vaz-portal-api" />
+      <root url="file://$PROJECT_DIR$/../examples" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../chat" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../youtubeAnalytics" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../sfc-sfs" />
+      <root url="file://$PROJECT_DIR$/../freezetag" />
+      <root url="file://$PROJECT_DIR$/../upload" />
+      <root url="file://$PROJECT_DIR$/../vaz-portal-api" />
+      <root url="file://$PROJECT_DIR$/../examples" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../chat" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../youtubeAnalytics" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
