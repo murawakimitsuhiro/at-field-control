@@ -11,7 +11,7 @@ GET     /                                       App.Index
 
 GET     /api/users                        Users.Index
 GET     /api/users/:id                    Users.Show
-POST    /api/users                        Users.Create
+POST    /api/users                        Users.CreateOrUpdate
 DELETE  /api/users/:id                    Users.Delete
 
 # Ignore favicon requests
