@@ -4,6 +4,7 @@ import (
 	"at-field-control/app/models"
 	"fmt"
 	"github.com/revel/revel"
+	_ "gopkg.in/validator.v2"
 	"gopkg.in/validator.v2"
 )
 
@@ -44,29 +45,33 @@ func (c Users) Show(id int) revel.Result {
 }
 
 func (c Users) CreateOrUpdate() revel.Result {
-	user := &models.User{}
+	request := struct {
+		 User       models.User `json:"user"`
+	}{}
 
-	fmt.Print(user)
-
-	if err := c.Params.BindJSON(&user); err != nil {
+	if err := c.Params.BindJSON(&request); err != nil {
 		return c.HandleBadRequestError(err.Error())
 	}
 
-	if err := validator.Validate(&user); err != nil {
+	if err := validator.Validate(&request.User); err != nil {
 		return c.HandleBadRequestError(err.Error())
 	}
+
+	fmt.Println("こちら名前")
+	fmt.Print(request.User.Name)
+	fmt.Println("<-")
 
 	old := models.User{}
-	models.DB.First(&old, user.ID)
+	models.DB.First(&old, request.User.ID)
 
 	if old.ID == 0 {
-		user.ID = 0
-		models.DB.Create(user)
+		request.User.ID = 0
+		models.DB.Create(&request.User)
 	} else {
-		models.DB.Save(user)
+		models.DB.Save(&request.User)
 	}
 
-	r := Response{user}
+	r := Response{&request.User}
 
 	return c.RenderJSON(r)
 }
