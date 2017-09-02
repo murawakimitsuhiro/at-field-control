@@ -1,6 +1,8 @@
-# Welcome to Revel
+# Welcome to Revel 
 
-A high-productivity web framework for the [Go language](http://www.golang.org/).
+# Dependence
+`go get github.com/jinzhu/gorm`
+`go get gopkg.in/validator.v2`
 
 
 ### Start the web server:
